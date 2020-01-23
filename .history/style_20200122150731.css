@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+
+body, html {
+  font-family: 'Varela Round', sans-serif;
+  background: yellowgreen;
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#button-go {
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  background-color: orange;
+  padding: 15px;
+  border-radius: 30px 5px;
+}
+
+#button-reset {
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  background-color: red;
+  padding: 15px;
+  border-radius: 30px 5px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  border-style: 1px black;
+}
+
+p {
+  padding: 30px;
+  margin: auto;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.black-face {
+  width: 100px;
+}
+
+.thumbs-face {
+  width: 200px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto }
+}
+
+
+#container {
+  display: flex;
+}
+
+.container-one {
+  display: grid;
+  padding: 50px;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,1fr);
+  width: 800px;
+  height: 800px;
+  grid-gap: 7px;
+}
+
+.container-two {
+  display: grid;
+  padding: 50px;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,1fr);
+  width: 800px;
+  height: 800px;
+  grid-gap: 7px;
+}
+
+.container-one div {
+  border: 1.5px solid white;
+  width: 100%;
+}
+
+.container-two div {
+  border: 1.5px solid black;
+  width: 100%;
+}
+
+#time {
+  padding: 50px;
+  margin: auto;
+  color: white;
+  font-size: 25px;
+}
+
+.dropper {
+    margin: 50px 10px 10px 50px;
+    width: 400px;
+    height: 250px;
+    background-color: #555;
+    border: 1px solid #111;
+    
+    border-radius: 10px;
+    transition: all 200ms linear;
+}
+
+.drop_hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
+}
+
+.draggable {
+    display: inline-block;
+    margin: 20px 10px 10px 20px;
+    padding-top: 20px;
+    width: 80px;
+    height: 60px;
+    color: #3D110F;
+    background-color: #822520;
+    border: 4px solid #3D110F;
+    text-align: center;
+    font-size: 2em;
+    cursor: move;
+
+    transition: all 200ms linear;
+    user-select: none;
+}
