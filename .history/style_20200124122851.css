@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+ 
+body, html {
+ font-family: 'Varela Round', sans-serif;
+ background: white;
+ margin: 0 auto;
+ padding: 0;
+}
+
+header {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.drag {
+ color: white;
+ font-size: 80px;
+ padding-right: 80px;
+}
+
+.black-face {
+ width: 150px;
+}
+
+.drop {
+ color: black;
+ font-size: 80px;
+ padding-left: 80px;
+}
+
+.thumbs-face {
+ width: 60px;
+}
+
+p {
+ padding: 30px;
+ margin: auto;
+ font-family: 'Varela Round', sans-serif;
+ font-size: 40px;
+ color: black;
+ text-align: center;
+}
+
+#start-the-game {
+ display: flex;
+ justify-content: space-around;
+}
+
+#button-go {
+ width: 150px;
+ color: white;
+ font-size: 20px;
+ background-color: #0037ff;
+ padding: 15px;
+ border-radius: 5px 50px;
+}
+
+#time {
+ color: blue;
+ font-size: 40px;
+ text-align: center;
+}
+
+#button-reset {
+ width: 150px;
+ color: white;
+ font-size: 20px;
+ background-color: green;
+ padding: 15px;
+ border-radius: 50px 5px;
+}
+
+#container {
+ display: flex;
+}
+ 
+.container-one {
+ display: grid;
+ padding: 50px;
+ grid-template-columns: repeat(5,1fr);
+ grid-template-rows: repeat(5,1fr);
+ width: 800px;
+ height: 800px;
+ grid-gap: 9px;
+}
+
+.container-two {
+ display: grid;
+ padding: 50px;
+ grid-template-columns: repeat(5,1fr);
+ grid-template-rows: repeat(5,1fr);
+ width: 800px;
+ height: 800px;
+ grid-gap: 9px;
+}
+
+.container-one div {
+ border: 2px solid white;
+ width: 100%;
+ height: 100%;
+}
+ 
+.container-two div {
+ border: 2px solid black;
+ width: 100%;
+ height: 100%;
+}
+
+.drop_hover {
+ box-shadow: 0 0 30px rgba(0, 0, 0, 2) inset;
+}
