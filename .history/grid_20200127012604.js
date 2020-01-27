@@ -71,7 +71,7 @@ function hourglass(id, cpt, lim, callback) {
 }
 
 function timer() {
-    hourglass("time", 35, 0, function () {
+    hourglass("time", 50, 0, function () {
         alert("GAME OVER ! Not fast enough");
     });
 };

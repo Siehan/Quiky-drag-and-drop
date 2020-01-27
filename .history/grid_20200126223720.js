@@ -117,6 +117,7 @@ console.log(containerTwo);
 
             dropper.addEventListener("dragleave", function () {
                 this.classList.remove("drop_hover")
+                // this.className = "dropper";
             });
 
             var dndHandler = this;
@@ -135,17 +136,32 @@ console.log(containerTwo);
                 const dropCase = dndHandler.draggedElement.className.split(" ")[1]
 
                 if (bothCase !== dropCase) {
-                    alert("OUPS, wrong position, GAME OVER");
+                    alert("OUPS, wrong case, GAME OVER");
                 }
 
+
+
+
+
+                //Object.is("case0", "case0");
+                //var bothCase = dropCase,
+                //if (bothCase.length !== dropCase.length);
+                //alert(You loose!)
+
+
+                // console.log(target.className, dndHandler.draggedElement.className)
                 while (target.className.indexOf("dropper") == -1) {
                     target = target.parentNode;
                 }
+
+                // target.className = "dropper";
 
                 clonedElement = target.appendChild(clonedElement);
                 dndHandler.applyDragEvents(clonedElement);
 
                 draggedElement.parentNode.removeChild(draggedElement);
+                //score++;
+                //console.log("score", score);
             });
         }
     };

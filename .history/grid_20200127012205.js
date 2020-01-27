@@ -71,7 +71,7 @@ function hourglass(id, cpt, lim, callback) {
 }
 
 function timer() {
-    hourglass("time", 35, 0, function () {
+    hourglass("time", 50, 0, function () {
         alert("GAME OVER ! Not fast enough");
     });
 };
@@ -117,6 +117,7 @@ console.log(containerTwo);
 
             dropper.addEventListener("dragleave", function () {
                 this.classList.remove("drop_hover")
+                // this.className = "dropper";
             });
 
             var dndHandler = this;
@@ -138,14 +139,28 @@ console.log(containerTwo);
                     alert("OUPS, wrong position, GAME OVER");
                 }
 
+                function congratulations() {
+                    if (dropCase.case == 25) {
+                        clearInterval(interval);
+                        finalTime = time.innerHTML;
+
+
+                        //show congratulations modal
+                        modal.classList.add("show");
+
+                // console.log(target.className, dndHandler.draggedElement.className)
                 while (target.className.indexOf("dropper") == -1) {
                     target = target.parentNode;
                 }
+
+                // target.className = "dropper";
 
                 clonedElement = target.appendChild(clonedElement);
                 dndHandler.applyDragEvents(clonedElement);
 
                 draggedElement.parentNode.removeChild(draggedElement);
+                //score++;
+                //console.log("score", score);
             });
         }
     };

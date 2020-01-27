@@ -71,7 +71,7 @@ function hourglass(id, cpt, lim, callback) {
 }
 
 function timer() {
-    hourglass("time", 35, 0, function () {
+    hourglass("time", 50, 0, function () {
         alert("GAME OVER ! Not fast enough");
     });
 };
@@ -117,6 +117,7 @@ console.log(containerTwo);
 
             dropper.addEventListener("dragleave", function () {
                 this.classList.remove("drop_hover")
+                // this.className = "dropper";
             });
 
             var dndHandler = this;
@@ -141,11 +142,14 @@ console.log(containerTwo);
                 while (target.className.indexOf("dropper") == -1) {
                     target = target.parentNode;
                 }
+                
 
                 clonedElement = target.appendChild(clonedElement);
                 dndHandler.applyDragEvents(clonedElement);
 
                 draggedElement.parentNode.removeChild(draggedElement);
+                //score++;
+                //console.log("score", score);
             });
         }
     };

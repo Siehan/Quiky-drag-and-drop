@@ -71,8 +71,8 @@ function hourglass(id, cpt, lim, callback) {
 }
 
 function timer() {
-    hourglass("time", 35, 0, function () {
-        alert("GAME OVER ! Not fast enough");
+    hourglass("time", 40, 0, function () {
+        alert("GAME OVER ! not fast enough");
     });
 };
 
@@ -91,6 +91,10 @@ for (let i = 0; i <= 24; i++) {
     containerTwo.appendChild(newDiv2);
 }
 console.log(containerTwo);
+
+
+
+
 
 (function () {
     var dndHandler = {
@@ -117,6 +121,7 @@ console.log(containerTwo);
 
             dropper.addEventListener("dragleave", function () {
                 this.classList.remove("drop_hover")
+                // this.className = "dropper";
             });
 
             var dndHandler = this;
@@ -135,17 +140,32 @@ console.log(containerTwo);
                 const dropCase = dndHandler.draggedElement.className.split(" ")[1]
 
                 if (bothCase !== dropCase) {
-                    alert("OUPS, wrong position, GAME OVER");
+                    alert("OUPS, wrong case, GAME OVER");
                 }
 
+
+
+
+
+                //Object.is("case0", "case0");
+                //var bothCase = dropCase,
+                //if (bothCase.length !== dropCase.length);
+                //alert(You loose!)
+
+
+                // console.log(target.className, dndHandler.draggedElement.className)
                 while (target.className.indexOf("dropper") == -1) {
                     target = target.parentNode;
                 }
+
+                // target.className = "dropper";
 
                 clonedElement = target.appendChild(clonedElement);
                 dndHandler.applyDragEvents(clonedElement);
 
                 draggedElement.parentNode.removeChild(draggedElement);
+                //score++;
+                //console.log("score", score);
             });
         }
     };
